@@ -1,0 +1,16 @@
+name: Trigger Contribution Build
+on:
+  pull_request_target:
+    types: [labeled]
+
+jobs:
+  trigget_contrib_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Test
+        env:
+          test: ${{ github }}
+        run: |
+          echo ${test}
