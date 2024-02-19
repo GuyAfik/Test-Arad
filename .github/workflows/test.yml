@@ -1,7 +1,6 @@
 name: Trigger Contribution Build
-on:
-  pull_request_target:
-    types: [labeled]
+on: push
+
 
 jobs:
   trigget_contrib_build:
